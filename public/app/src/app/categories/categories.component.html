@@ -1,0 +1,12 @@
+
+<h1>Categories</h1>
+
+<a href="#" routerLink="/create-category">
+    <button>Create Category</button>
+</a>
+
+<ul *ngIf="categories">
+    <li *ngFor="let category of categories">
+        <p class="name">Name: {{ category.name }}</p>
+    </li>
+</ul>

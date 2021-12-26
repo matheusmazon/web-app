@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-devices',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DevicesComponent implements OnInit {
 
-  constructor() { }
+  devices: any[] = [];
+
+  constructor(private _api: ApiService) { }
 
   ngOnInit(): void {
+    this._api.getDevices().subscribe(data => {
+      this.devices = data as any[];
+      console.log(this.devices);
+    });
   }
 
 }

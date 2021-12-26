@@ -1,0 +1,18 @@
+
+<h1>Create a new device</h1>
+
+<form (ngSubmit)="onSubmit()" id="create-device">
+    <label for="color">Color</label>
+    <input type="text" id="color" [(ngModel)]="color" [ngModelOptions]="{standalone: true}">
+
+    <label for="partNumber">Part Number</label>
+    <input type="text" id="partNumber" [(ngModel)]="partNumber" [ngModelOptions]="{standalone: true}">
+
+    <label for="selectCategory">Category</label>
+    <select name="selectedCategory" id="selectCategory" [(ngModel)]="selectedCategory">
+        <option *ngFor="let category of categories" [ngValue]="category" >{{category.name}}</option>
+    </select>
+
+</form>
+
+<button type="submit" form="create-device" value="Submit">Submit</button>

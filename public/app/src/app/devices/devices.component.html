@@ -1,1 +1,16 @@
-<p>devices works!</p>
+
+
+<h1>Devices</h1>
+
+<a href="#" routerLink="/create-device">
+    <button>Create Device</button>
+</a>
+
+<ul *ngIf="devices">
+    <li *ngFor="let device of devices">
+        <p class="color">Color: {{ device.color }}</p>
+        <p class="partNumber">Part Number: {{ device.partNumber }}</p>
+        <p class="categoryName">Category: {{ device.category.name }}</p>
+
+    </li>
+</ul>

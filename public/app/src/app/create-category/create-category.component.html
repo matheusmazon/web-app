@@ -1,0 +1,9 @@
+
+<h1>Create a new category</h1>
+
+<form (ngSubmit)="onSubmit()" id="create-category">
+    <label for="name">Name</label>
+    <input type="text" id="name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+</form>
+
+<button type="submit" form="create-category" value="Submit">Submit</button>

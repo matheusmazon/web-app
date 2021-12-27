@@ -14,7 +14,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      part_number: {
+      partNumber: {
         type: Sequelize.INTEGER
       },
       created_at: {

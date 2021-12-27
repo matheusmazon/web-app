@@ -24,7 +24,6 @@ export class CreateDeviceComponent implements OnInit {
   ngOnInit(): void {
     this._api.getCategories().subscribe(data => {
       this.categories = data as any[];
-      console.log(this.categories);
     });
   }
 

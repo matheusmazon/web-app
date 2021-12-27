@@ -15,8 +15,13 @@ export class DevicesComponent implements OnInit {
   ngOnInit(): void {
     this._api.getDevices().subscribe(data => {
       this.devices = data as any[];
-      console.log(this.devices);
     });
   }
 
+  deleteDevice(id: number) {
+    if(confirm("Are you sure you want to delete this device?")) {
+      this._api.deleteDevice(id).subscribe();
+      window.location.reload();
+    }
+  }
 }

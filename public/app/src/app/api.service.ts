@@ -20,6 +20,10 @@ export class ApiService {
     });
   }
 
+  deleteDevice(deviceId: number) {
+    return this.http.delete("http://localhost:8888/device/" + deviceId);
+  }
+
   getCategories() {
     return this.http.get("http://localhost:8888/categories");
   }
@@ -28,5 +32,9 @@ export class ApiService {
     return this.http.post("http://localhost:8888/categories", {
       name
     });
+  }
+
+  deleteCategory(categoryId: number) {
+    return this.http.delete("http://localhost:8888/category/" + categoryId);
   }
 }

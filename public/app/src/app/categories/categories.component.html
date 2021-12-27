@@ -8,5 +8,8 @@
 <ul *ngIf="categories">
     <li *ngFor="let category of categories">
         <p class="name">Name: {{ category.name }}</p>
+        <div class="deleteIconWrapper" (click)="deleteCategory(category.id)">
+            <i class="fa fa-trash"></i>
+        </div>
     </li>
 </ul>

@@ -11,6 +11,8 @@
         <p class="color">Color: {{ device.color }}</p>
         <p class="partNumber">Part Number: {{ device.partNumber }}</p>
         <p class="categoryName">Category: {{ device.category.name }}</p>
-
+        <div class="deleteIconWrapper" (click)="deleteDevice(device.id)">
+            <i class="fa fa-trash"></i>
+        </div>
     </li>
 </ul>

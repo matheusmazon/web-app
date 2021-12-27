@@ -15,8 +15,13 @@ export class CategoriesComponent implements OnInit {
   ngOnInit(): void {
     this._api.getCategories().subscribe(data => {
       this.categories = data as any[];
-      console.log(this.categories);
     });
   }
 
+  deleteCategory(id: number) {
+    if(confirm("Are you sure you want to delete this category?")) {
+      this._api.deleteCategory(id).subscribe();
+      window.location.reload();
+    }
+  }
 }

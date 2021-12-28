@@ -2,8 +2,7 @@
 
 # How to run this app
 
-### Note
-Remember to fill the server/src/config/database.js
+### Note: Remember to fill the server/src/config/database.js with databse information
 
 * Clone the repo
 * cd server
@@ -19,3 +18,5 @@ Remember to fill the server/src/config/database.js
 * Front-end is deployed on a S3 instance: http://devices-and-categories-app.s3-website.us-east-2.amazonaws.com
 * Back-end is deployed on a EC2 instance: http://52.15.144.207:8888/devices or http://52.15.144.207:8888/categories
 * The database is deployed on a RDS instance.
+
+### Note: Make sure to reload the *devices* and *categories* pages after you create a new one.
